@@ -1,0 +1,50 @@
+<ion-view cache-view="false" hide-back-button="true" class="pane">
+  <ion-header-bar class="bar bar-header bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar">
+      <div side="left" class="buttons buttons-left header-item">
+        <button class="button button-clear" ng-if="!Dono.inserting &amp;&amp; !Dono.editing" menu-toggle="left" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button>
+        <button class="button button-clear" ng-if="Dono.inserting || Dono.editing" ng-click="Dono.cancel()" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-ios-arrow-back"></i> </button>
+      </div>
+        <h1 class="title">Dono</h1>
+      <div side="right" class="buttons buttons-right header-item">
+        <button class="button button-clear" ng-if="!Dono.inserting &amp;&amp; !Dono.editing" ng-click="Dono.startInserting()" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-ios-plus-empty"></i> </button>
+        <button class="button button-clear" ng-if="Dono.inserting || Dono.editing" ng-click="Dono.post()" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-ios-checkmark"></i> </button>
+      </div>
+  </ion-header-bar>
+  <ion-content class="scroll-content has-header" data-component="crn-ion-content">
+    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854">
+      <datasource name="Dono" entity="app.Dono" keys="id" rows-per-page="10" delete-message="Deseja remover?" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;endereco&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;phone&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]"></datasource>
+    </div>
+	
+    <div crn-datasource="Dono" class="" ng-hide="Dono.editing || Dono.inserting">
+      <div class="component-holder ng-binding ng-scope" data-component="crn-ion-list" id="crn-ion-list-main">
+        <cron-list id="ion-list-main" options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Dono&quot;,&quot;entity&quot;:&quot;app.Dono&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Dono&quot;,&quot;customId&quot;:&quot;Dono&quot;,&quot;name&quot;:&quot;Dono&quot;,&quot;customQueryName&quot;:&quot;app.Dono&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Dono&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;endereco&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;phone&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;endereco&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;phone&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.Dono&quot;},&quot;allowPaging&quot;:true,&quot;allowSorting&quot;:true,&quot;allowGrouping&quot;:false,&quot;allowSelectionTotalPageToShow&quot;:true,&quot;allowRefreshGrid&quot;:true,&quot;allowSelectionRow&quot;:true,&quot;hideModalButtons&quot;:true,&quot;editable&quot;:&quot;datasource&quot;,&quot;columns&quot;:[{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;nome&quot;,&quot;headerText&quot;:&quot;Nome&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false},&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Command&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;command&quot;:&quot;edit|destroy&quot;,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false},&quot;aggregates&quot;:[]}],&quot;toolBarButtons&quot;:[{&quot;type&quot;:&quot;Native&quot;,&quot;title&quot;:&quot;create&quot;}],&quot;details&quot;:[],&quot;groupings&quot;:[]}" class="" style="">
+        </cron-list>
+      </div>
+    </div>
+    <div ng-show="Dono.editing || Dono.inserting">
+      <form crn-datasource="Dono">
+        <fieldset ng-disabled="!Dono.editing &amp;&amp; !Dono.inserting">
+            <!-- nome begin -->
+            <label for="textinput-nome-21296" class="item item-input item-stacked-label" data-component="crn-input-floating">
+              <span class="input-label">Nome</span>
+              <input type="text" placeholder="Nome" ng-model="Dono.active.nome" id="textinput-nome-21296" name="textinput-nome" mask="" required="required">
+            </label>
+            <!-- endereco begin -->
+            <label for="textinput-endereco-21296" class="item item-input item-stacked-label" data-component="crn-input-floating">
+              <span class="input-label">Endereço</span>
+              <input type="text" placeholder="Endereço" ng-model="Dono.active.endereco" id="textinput-endereco-21296" name="textinput-endereco" mask="" required="required">
+            </label>
+            <!-- phone begin -->
+            <label for="textinput-phone-21296" class="item item-input item-stacked-label" data-component="crn-input-floating">
+              <span class="input-label">Celular</span>
+              <input type="text" placeholder="Celular" ng-model="Dono.active.phone" id="textinput-phone-21296" name="textinput-phone" mask="(00) 00000-0000;0">
+            </label>
+
+            <!-- NtoN  -->
+            <!-- NtoN  end-->
+
+        </fieldset>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

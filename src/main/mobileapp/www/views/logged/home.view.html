@@ -1,0 +1,16 @@
+<ion-view class="pane">
+  <ion-header-bar align-title="center" class="bar bar-positive" data-component="crn-ion-header-bar">
+    <div class="buttons buttons-left header-item">
+      <button class="button button-clear" menu-toggle="left" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button>
+    </div>
+    <h1 class="title">{{'Home.view.Home' | translate }}</h1>
+    <div class="buttons buttons-right header-item">
+      
+    </div>
+  </ion-header-bar>
+  <ion-content class="scroll-content has-header" data-component="crn-ion-content">
+    <div style="height: 60px;" data-component="crn-spacer" class="component-holder col-xs-12" id="crn-spacer-909305">
+      &nbsp;
+    </div><div class="item component-holder col-xs-12" crn-datasource="" ng-repeat="rowData in datasource.data" id="crn-list-icon-685989" data-component="crn-list-icon"><a class="item-icon-left" xattr-position="item-icon-left" data-component="crn-list-item-icon" id="crn-list-item-icon7974" href=""><i class="icon dark ion ion-android-done" xattr-theme="dark"></i><div class="item-content text-left item-icon-left" xattr-text-position="text-left" ng-click="cronapi.screen.changeView('#/app/logged/atendimento', [])" xattr-position="item-icon-left"><h2 class="dark" xattr-theme="dark">Cadastrar Atividade</h2></div></a></div><div class="item component-holder col-xs-12" crn-datasource="" ng-repeat="rowData in datasource.data" id="crn-list-icon-96639" data-component="crn-list-icon"><a class="item-icon-left" xattr-position="item-icon-left" data-component="crn-list-item-icon" id="crn-list-item-icon4358" href=""><i class="icon dark ion ion-android-done-all" xattr-theme="dark"></i><div class="item-content text-left item-icon-left" xattr-text-position="text-left" xattr-position="item-icon-left" ng-click="cronapi.screen.changeView('#/app/logged/avaliacao', [])"><h2 class="dark" xattr-theme="dark">Ver Avaliação</h2></div></a></div><div class="item component-holder col-xs-12" crn-datasource="" ng-repeat="rowData in datasource.data" id="crn-list-icon-465594" data-component="crn-list-icon"><a class="item-icon-left" xattr-position="item-icon-left" data-component="crn-list-item-icon" id="crn-list-item-icon898" href=""><i class="icon dark ion ion-close-circled" xattr-theme="dark"></i><div class="item-content text-left item-icon-left" xattr-text-position="text-left" xattr-position="item-icon-left"><h2 class="dark" xattr-theme="dark"></h2></div></a></div>
+  </ion-content>
+</ion-view>
